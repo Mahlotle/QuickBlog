@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { blogCategories } from "../assets/assets";
+import {motion} from "motion/react"
 
 const BlogList = () => {
   const [menu, setMenu] = useState("All");
@@ -16,7 +17,12 @@ const BlogList = () => {
             >
               {/* Background circle only when active */}
               {menu === item && (
-                <div className="absolute inset-0 -z-10 bg-primary rounded-full"></div>
+                <motion.div 
+                  layoutId = 'underline'
+                  transition = {{type: 'spring', stiffness: 350, damping: 30}}
+                  className="absolute inset-0 -z-10 bg-primary rounded-full">
+
+                </motion.div>
               )}
               {item}
             </button>
