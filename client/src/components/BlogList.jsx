@@ -38,6 +38,7 @@ const BlogList = () => {
             <BlogCard key={blog._id} blog={blog} />
           ))}
       </div>
+      {/* --- END OF Blog Cards --- */}
     </div>
   );
 };
