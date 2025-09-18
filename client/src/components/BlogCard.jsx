@@ -18,9 +18,10 @@ const BlogCard = ({ blog }) => {
 
       <div className="p-5">
         <h5 className="mb-2 font-medium text-gray-900">{title}</h5>
-        <p className="mb-3 text-xs text-gray-600">
-          {description.slice(0, 70)}...
-        </p>
+        <p
+          className="mb-3 text-xs text-gray-600"
+          dangerouslySetInnerHTML={{ __html: description.slice(0, 70) }}
+        ></p>
       </div>
     </div>
   );
